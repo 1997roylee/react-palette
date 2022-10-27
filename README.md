@@ -50,3 +50,9 @@ const { data, loading, error } = usePalette(IMAGE_URL)
 That library was created using `node-vibrant` to extract the prominent colors.
 
 [https://github.com/akfish/node-vibrant](https://github.com/akfish/node-vibrant)
+
+## Reference
+
+Upgrade dependences
+
+https://flaviocopes.com/update-npm-dependencies/

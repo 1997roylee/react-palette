@@ -1,9 +1,9 @@
-import React, { ReactNode } from "react";
+import React, { cloneElement, ReactNode } from "react";
 import { PaletteState, usePalette } from "./usePalette";
 
 export type PaletteProps = {
   src: string;
-  children(palette: PaletteState): ReactNode;
+  children: JSX.Element;
 };
 
 export const Palette: React.FC<PaletteProps> = ({
@@ -12,5 +12,7 @@ export const Palette: React.FC<PaletteProps> = ({
 }: PaletteProps) => {
   const palette = usePalette(src);
 
-  return <>{children(palette)}</>;
+  return cloneElement(children, {
+    palette
+  })
 };
